@@ -1,0 +1,127 @@
+/* +================================+ */
+/*                                    */
+/*                                    */
+/*    ██████╗  ██████╗ ███████╗██╗    */
+/*    ██╔══██╗██╔═══██╗██╔════╝██║    */
+/*    ██████╔╝██║   ██║█████╗  ██║    */
+/*    ██╔══██╗██║   ██║██╔══╝  ██║    */
+/*    ██║  ██║╚██████╔╝██║     ██║    */
+/*    ╚═╝  ╚═╝ ╚═════╝ ╚═╝     ╚═╝    */
+/*                                    */
+/*                                    */
+/* +================================+ */
+
+
+/* Settings */
+configuration {
+	modi: "window,drun";
+	font: "JetBrainsMonoNL Nerd Font 11.5";
+	show-icons: true;
+	terminal: "/usr/bin/alacritty";
+	window-thumbnail: true;
+	display-window: "  Windows";
+	display-drun: "󰕮  Apps";
+    sidebar-mode: true;
+}
+
+
+/* Current desktop theme */
+/* @theme "~/.config/rofi/themes/gruvbox.rasi" */ 
+
+/* @theme "~/.config/rofi/themes/mxml.rasi" */ 
+
+theme {
+    bg: #1d2021;
+    bg-alt: #32302f;
+    fg: #ebdbb2;
+}
+
+/* General & Colors */
+* {
+    border: 0;
+    margin: 0;
+    padding: 0;
+    spacing: 0;
+
+    background-color: @bg;
+    text-color: @fg;
+}
+
+
+/* Styling */
+window {
+    width: 650;
+    padding: 15;
+}
+
+inputbar {
+    children: [entry];
+    margin: 0 0 15 0;
+}
+
+entry {
+    border: 0 0 2 0;
+    border-color: @bg-alt;
+    border-radius: 5;
+    padding: 10;
+    placeholder: "  Search...";
+    cursor: text;
+}
+
+listview {
+    lines: 6;
+    columns: 1;
+    cursor: pointer;
+    scrollbar: true;
+    margin: 0 0 15 0;
+}
+
+scrollbar {
+    handle-color: @fg;
+    background-color: @bg-alt;
+    margin: 0 0 0 10;
+}
+
+element {
+    padding: 10;
+    spacing: 10;
+    cursor: pointer;
+}
+
+element.selected {
+    background-color: @fg;
+    border-radius: 5;
+    padding: 10;
+    spacing: 10;
+    cursor: pointer;
+}
+
+element-icon {
+    size: 25;
+    cursor: pointer;
+}
+
+element-icon.selected {
+    background-color: inherit;
+}
+
+element-text {
+    text-color: @fg;
+    vertical-align: 0.5;
+    cursor: pointer;
+}
+
+element-text.selected {
+    background-color: inherit;
+    text-color: @bg;
+}
+
+button {
+    padding: 10;
+    border-radius: 5;
+    cursor: pointer;
+}
+
+button.selected {
+    background-color: @bg-alt;
+}

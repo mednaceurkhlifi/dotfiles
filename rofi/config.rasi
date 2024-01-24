@@ -1,0 +1,7 @@
+configuration {
+  modi: "window,drun,run,combi";
+  font: "JetBrainsMono 14";
+  combi-modi: "window,drun";
+}
+
+@theme "~/.config/rofi/themes/mxml.rasi"
